@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<head>
+  <!-- Site Title-->
+  <title>Contacts</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=PT+Sans:400,700%7CMontserrat:400,700%7CPlayfair+Display:400,400i,700,700i,900,900i">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+</head>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
+  import { getDatabase, ref, get, set, child } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyC2fCK4ErswWvo9nHziMVnoVNOylZ9oNxE",
+    authDomain: "paginaropacontact.firebaseapp.com",
+    databaseURL: "https://paginaropacontact-default-rtdb.firebaseio.com",
+    projectId: "paginaropacontact",
+    storageBucket: "paginaropacontact.appspot.com",
+    messagingSenderId: "1068371091767",
+    appId: "1:1068371091767:web:65ef99b20e6a232950bab2",
+    measurementId: "G-VE2L3BCN71"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase();
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Crear variables
+    const firstName = document.querySelector('#contact-first-name');
+    const lastName = document.querySelector('#contact-last-name');
+    const email = document.querySelector('#contact-email');
+    const phone = document.querySelector('#contact-phone');
+    const msg = document.querySelector('#contact-message');
+    // inicializar botones
+    const btnUploadContact = document.getElementById("btn_uploadContact")
+
+    btnUploadContact.addEventListener('click', () => {
+      // alert('hola');
+      upload()
+    })
+    function upload() {
+      const sanitizedEmail = email.value.replace(/\./g, ',').replace(/#/g, '%23').replace(/\$/g, '%24').replace(/\[/g, '%5B').replace(/\]/g, '%5D');
+
+      set(ref(db, 'usuariosContact/' + sanitizedEmail), {
+        firstName: firstName.value,
+        lastName: lastName.value,
+        email: email.value,
+        phone: phone.value,
+        msg: msg.value
+      })
+        .then(() => {
+          alert('datos enviados');
+          firstName.value = ''
+          lastName.value = ''
+          email.value = ''
+          phone.value = ''
+          msg.value = ''
+        })
+        .catch((error) => {
+          console.log('', error);
+        });
+    }
+  });
+
+</script>
+
+<body>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div id="circular3dG">
+        <div class="circular3dG" id="circular3d_1G"></div>
+        <div class="circular3dG" id="circular3d_2G"></div>
+        <div class="circular3dG" id="circular3d_3G"></div>
+        <div class="circular3dG" id="circular3d_4G"></div>
+        <div class="circular3dG" id="circular3d_5G"></div>
+        <div class="circular3dG" id="circular3d_6G"></div>
+        <div class="circular3dG" id="circular3d_7G"></div>
+        <div class="circular3dG" id="circular3d_8G"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+  <!-- Page-->
+  <div class="page text-center">
+    <!-- Page Header-->
+    <header class="page-header">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+          data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+          data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xg-stick-up-offset="46px"
+          data-xxl-stick-up-offset="46px">
+          <div class="rd-navbar-top-panel-wrap">
+            <div class="rd-navbar-top-panel">
+              <div class="left-side">
+                <!-- Contact Info-->
+                <address class="contact-info text-left">
+                  <div class="d-inline-block"><a class="unit align-items-xl-center flex-row unit-spacing-xxs"
+                      href="#"><span class="unit-left"><span
+                          class="icon icon-sm icon-primary icon-circle mdi mdi-map-marker text-bermuda"></span></span><span
+                        class="unit-body"><span class="text-gray-lighter">2130 Fulton Street, San Diego, CA 94117-1080
+                          USA</span></span></a></div>
+                  <div class="d-inline-block">
+                    <div class="unit align-items-center flex-row unit-spacing-xxs">
+                      <div class="unit-left">
+                        <div class="icon icon-sm icon-primary icon-circle mdi mdi-calendar-clock text-bermuda"></div>
+                      </div>
+                      <div class="unit-body">
+                        <div class="text-gray-lighter">Mon–Sun: 9:00am–9:00pm</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-inline-block"><a class="unit align-items-center flex-row unit-spacing-xxs"
+                      href="tel:#"><span class="unit-left"><span
+                          class="icon icon-sm icon-primary icon-circle mdi mdi-phone text-bermuda"></span></span><span
+                        class="unit-body"><span class="text-gray-lighter">1-800-1234-567</span></span></a></div>
+                </address>
+              </div>
+              <div class="right-side">
+                <ul class="list-inline list-inline-2 list-primary">
+                  <li><a class="icon icon-xs icon-circle fa fa-facebook text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-xs icon-circle fa fa-twitter text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-xs icon-circle fa fa-pinterest-p text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-xs icon-circle fa fa-vimeo text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-xs icon-circle fa fa-google text-gray-lighter" href="#"></a></li>
+                  <li><a class="icon icon-xs icon-circle fa fa-rss text-gray-lighter" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="rd-navbar-inner">
+            <!-- RD Navbar Panel-->
+            <div class="rd-navbar-left-side">
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img
+                      class="img-responsive center-block" src="images/logo.png" width="179" height="54" alt=""></a>
+                </div>
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle-search-fixed d-lg-none d-tablet"
+                  data-rd-navbar-toggle=".rd-navbar-search-wrap-fixed"></button>
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-collapse-toggle d-xl-none d-lg-inline-block"
+                  data-rd-navbar-toggle=".rd-navbar-top-panel"><span></span></button>
+              </div>
+            </div>
+            <div class="rd-navbar-right-side">
+              <div class="rd-navbar-nav-wrap d-inline-block">
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="entertainment.html">Services</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="shops.html">Shops</a></li>
+                      <li><a href="food.html">Food</a></li>
+                      <li><a href="entertainment.html">Entertainment</a></li>
+                      <li><a href="parking.html">Parking</a></li>
+                      <li><a href="gift-cards.html">Gift Cards</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="events.html">Events</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="events.html">All Events</a></li>
+                      <li><a href="event-single.html">Event Page</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="sales.html">Sales</a></li>
+                  <li><a href="blog-classic.html">News</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="blog-classic.html">Blog Classic</a></li>
+                      <li><a href="blog-grid.html">Blog Grid</a></li>
+                      <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                      <li><a href="blog-modern.html">Blog Modern</a></li>
+                      <li><a href="blog-post.html">Blog Post</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Pages</a>
+                    <!-- RD Navbar Megamenu-->
+                    <div class="rd-navbar-megamenu">
+                      <div class="row no-gutters justify-content-sm-center">
+                        <ul class="col-lg-3">
+                          <li><a href="typography.html">Typography</a></li>
+                          <li><a href="buttons.html">Buttons</a></li>
+                          <li><a href="forms.html">Forms</a></li>
+                          <li><a href="tabs-accordions.html">Tabs & Accordions</a></li>
+                          <li><a href="tables.html">Tables</a></li>
+                          <li><a href="progress-bars.html">Progress Bars</a></li>
+                        </ul>
+                        <ul class="col-lg-3 offset-top-0">
+                          <li><a href="grid.html">Grid</a></li>
+                          <li><a href="404.html">404 Page</a></li>
+                          <li><a href="503.html">503 Page</a></li>
+                          <li><a href="maintenance.html">Maintenance</a></li>
+                          <li><a href="coming-soon.html">Coming Soon</a></li>
+                          <li><a href="sitemap.html">Sitemap</a></li>
+                        </ul>
+                        <ul class="col-lg-3 offset-top-0">
+                          <li><a href="privacy.html">Terms of Use</a></li>
+                          <li><a href="directions.html">Directions</a></li>
+                          <li><a href="sale-single.html">Sale Page</a></li>
+                          <li><a href="shop-single.html">Shop Page</a></li>
+                          <li><a href="restaurant-single.html">Restaurant Page</a></li>
+                          <li><a href="search-results.html">Search Results</a></li>
+                        </ul>
+                        <ul class="col-lg-3 offset-top-0">
+                          <li><a href="gallery-grid.html">Gallery Grid</a></li>
+                          <li><a href="gallery-grid-without-padding.html">Gallery Grid without Padding</a></li>
+                          <li><a href="gallery-cobbles.html">Gallery Cobbles</a></li>
+                          <li><a href="gallery-masonry.html">Gallery Masonry</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="active"><a href="contacts.html">Contacts</a></li>
+                </ul>
+              </div>
+              <!--RD Navbar Search-->
+              <div class="rd-navbar-search-wrap-fixed d-inline-block">
+                <div class="rd-navbar-search-wrap">
+                  <div class="rd-navbar-search"><a class="rd-navbar-search-toggle"
+                      data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
+                    <form class="rd-search rd-navbar-search-custom" action="search-results.html"
+                      data-search-live="rd-search-results-live" method="GET">
+                      <div class="form-group">
+                        <label class="form-label" for="rd-navbar-search-form-input">Search</label>
+                        <input class="rd-navbar-search-form-input form-control form-control-gray-lightest"
+                          id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                        <button type="submit"><span class="icon icon-xs fa fa-search"></span></button>
+                      </div>
+                      <div class="rd-search-results-live d-none d-xl-block" id="rd-search-results-live"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- RD Navbar Toggle-->
+              <button class="rd-navbar-toggle-search d-none d-lg-inline-block veil-tablet"
+                data-rd-navbar-toggle=".rd-navbar-search-wrap"></button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section
+      class="section-height-800 breadcrumb-modern parallax-container context-dark bg-gray-darkest d-none d-lg-block"
+      data-parallax-img="images/backgrounds/background-01-1920-900.jpg">
+      <div class="parallax-content">
+        <div class="bg-overlay-darker">
+          <div class="container-wide section-34 section-md-60 section-lg-top-130 section-lg-bottom-155">
+            <div class="d-none d-lg-block">
+              <h1>Contacts</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-34 bg-selago">
+      <div class="container">
+        <ul class="list-inline list-inline-12 list-inline-icon p">
+          <li><a href="index.html">Home</a></li>
+          <li class="text-gray-lighter">Contacts
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Page Content-->
+    <main class="page-content">
+      <!-- Contacts-->
+      <section class="section-60 section-md-120 text-left">
+        <div class="container-wide">
+          <div class="row justify-content-sm-center">
+            <div class="col-md-10 col-lg-8">
+              <div class="inset-lg-right-60 inset-xxl-left-85 inset-xxl-right-120">
+                <hr class="divider hr-left-0 bg-bermuda">
+                <h3 class="offset-top-20">Get in Touch</h3>
+                <p class="offset-top-40">You can contact us any way that is convenient for you. We are available 24/7
+                  via fax or email. You can also use a quick contact form below or visit us personally. We would be
+                  happy to answer your questions.</p>
+                <!-- RD Mailform-->
+                <form class="rd-mailform text-left offset-top-35" data-form-output="form-output-global"
+                  data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-xl-6">
+                      <div class="form-group form-group-outside">
+                        <label class="form-label form-label-outside" for="contact-first-name">First Name</label>
+                        <input class="form-control" id="contact-first-name" type="text" name="firstName"
+                          data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="col-xl-6 offset-top-10 offset-xl-top-0">
+                      <div class="form-group form-group-outside">
+                        <label class="form-label form-label-outside" for="contact-last-name">Last Name</label>
+                        <input class="form-control" id="contact-last-name" type="text" name="lastName"
+                          data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="col-xl-6 offset-top-10">
+                      <div class="form-group form-group-outside">
+                        <label class="form-label form-label-outside" for="contact-email">E-mail</label>
+                        <input class="form-control" id="contact-email" type="text" name="email"
+                          data-constraints="@Email @Required">
+                      </div>
+                    </div>
+                    <div class="col-xl-6 offset-top-10">
+                      <div class="form-group form-group-outside">
+                        <label class="form-label form-label-outside" for="contact-phone">Phone</label>
+                        <input class="form-control" id="contact-phone" type="text" name="phone"
+                          data-constraints="@PhoneNumber @Required">
+                      </div>
+                    </div>
+                    <div class="col-xl-12 offset-top-10">
+                      <div class="form-group form-group-outside">
+                        <label class="form-label form-label-outside" for="contact-message">Message</label>
+                        <textarea class="form-control" id="contact-message" name="message"
+                          data-constraints="@Required"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="offset-top-20">
+                    <button id="btn_uploadContact" class="btn btn-primary" type="submit">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-10 col-lg-4 offset-top-90 offset-lg-top-0">
+              <hr class="divider hr-left-0 bg-bermuda">
+              <h5 class="offset-top-15">Socials</h5>
+              <ul class="list-inline list-inline-2 list-primary offset-top-20">
+                <li class="inset-left-0"><a class="icon icon-xs icon-circle fa fa-facebook text-gray-lighter"
+                    href="#"></a></li>
+                <li><a class="icon icon-xs icon-circle fa fa-twitter text-gray-lighter" href="#"></a></li>
+                <li><a class="icon icon-xs icon-circle fa fa-pinterest-p text-gray-lighter" href="#"></a></li>
+                <li><a class="icon icon-xs icon-circle fa fa-vimeo text-gray-lighter" href="#"></a></li>
+                <li><a class="icon icon-xs icon-circle fa fa-google text-gray-lighter" href="#"></a></li>
+                <li><a class="icon icon-xs icon-circle fa fa-rss text-gray-lighter" href="#"></a></li>
+              </ul>
+              <div class="offset-top-60 offset-lg-top-85">
+                <hr class="divider hr-left-0 bg-bermuda">
+                <h5 class="offset-top-15">Phones</h5>
+                <div class="offset-top-20">
+                  <!-- Unit-->
+                  <div class="unit align-items-center flex-row unit-spacing-xxs">
+                    <div class="unit-left"><span class="icon icon-sm mdi mdi-phone text-primary"></span></div>
+                    <div class="unit-body">
+                      <div class="d-inline-block">
+                        <p><a class="text-gray-light" href="tel:#">1-800-1234-567</a></p>
+                      </div>,
+                      <div class="d-inline-block">
+                        <p><a class="text-gray-light" href="tel:#">1-800-9514-654</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offset-top-60 offset-lg-top-85">
+                <hr class="divider hr-left-0 bg-bermuda">
+                <h5 class="offset-top-15">E-mail</h5>
+                <div class="offset-top-20">
+                  <!-- Unit-->
+                  <div class="unit align-items-center flex-row unit-spacing-xxs">
+                    <div class="unit-left"><span class="icon icon-sm mdi mdi-email-outline text-primary"></span></div>
+                    <div class="unit-body">
+                      <p><a class="text-gray-light" href="mailto:#">info@demolink.org</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offset-top-60 offset-lg-top-85">
+                <hr class="divider hr-left-0 bg-bermuda">
+                <h5 class="offset-top-15">Address</h5>
+                <div class="offset-top-20 p">
+                  <!-- Unit-->
+                  <div
+                    class="unit align-items-center align-items-lg-start align-items-xxl-center flex-row unit-spacing-xxs">
+                    <div class="unit-left"><span class="icon icon-sm mdi mdi-map-marker text-primary"></span></div>
+                    <div class="unit-body"><a class="text-gray-light" href="contacts.html">2130 Fulton Street, San
+                        Diego, CA 94117-1080 USA</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <!-- Google Map-->
+        <div class="google-map-container" data-zoom="15" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45."
+          data-styles="[{&quot;featureType&quot;:&quot;landscape.natural&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#e0efef&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;hue&quot;:&quot;#1900ff&quot;},{&quot;color&quot;:&quot;#c0e8e8&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;lightness&quot;:100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit.line&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:700}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#7dcdcd&quot;}]}]">
+          <div class="google-map"></div>
+          <ul class="google-map-markers">
+            <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45."
+              data-description="9870 St Vincent Place, Glasgow" data-icon="images/gmap_marker.png"
+              data-icon-active="images/gmap_marker_active.png"></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- Page Footer-->
+    <footer class="page-footer bg-shark section-80 section-lg-top-120 section-lg-bottom-60">
+      <div class="container-wide">
+        <div class="row justify-content-sm-center inset-xxl-left-55 row-40">
+          <div class="col-sm-6 col-md-5 col-xl-4 col-xxl-4 text-xxl-center">
+            <p class="text-gray-lighter text-left inset-xxl-right-140">Fashion Day is a four-story shopping and
+              entertainment center located in the heart of downtown San Diego in the thriving Yerba Buena Neighborhood.
+              Shop at the City Target on the second level and visit a 16-screen AMC Theater with the largest IMAX in
+              North America.</p>
+          </div>
+          <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
+            <!-- List Marked-->
+            <ul class="list list-marked list-marked-white text-left inset-xxl-left-75">
+              <li><a class="text-bermuda" href="shops.html">Shops</a></li>
+              <li><a class="text-bermuda" href="food.html">Food</a></li>
+              <li><a class="text-bermuda" href="entertainment.html">Entertainment</a></li>
+              <li><a class="text-bermuda" href="parking.html">Parking</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
+            <!-- List Marked-->
+            <ul class="list list-marked list-marked-white text-left inset-xxl-left-100">
+              <li><a class="text-bermuda" href="gift-cards.html">Mall Gift Cards</a></li>
+              <li><a class="text-bermuda" href="entertainment.html">About Us</a></li>
+              <li><a class="text-bermuda" href="directions.html">Directions</a></li>
+              <li><a class="text-bermuda" href="entertainment.html">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-center">
+            <!-- List Marked-->
+            <ul class="list list-marked list-marked-white text-left inset-xxl-left-140">
+              <li><a class="text-bermuda" href="events.html">Events</a></li>
+              <li><a class="text-bermuda" href="sales.html">Sales</a></li>
+              <li><a class="text-bermuda" href="blog-classic.html">Latest News</a></li>
+              <li><a class="text-bermuda" href="contacts.html">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="row justify-content-sm-center align-items-sm-center justify-content-xxl-between offset-xl-top-75 row-40 offset-top-50">
+          <div class="col-md-3 col-lg-5 col-xl-5 col-xxl-4 text-xxl-center text-md-left"><a class="d-inline-block"
+              href="index.html"><img class="img-responsive center-block" src="images/logo-primary.png" width="179"
+                height="54" alt=""></a></div>
+          <div class="col-md-7 col-lg-5 col-xl-5 text-xxl-center">
+            <p class="text-small">&#169; <span class="copyright-year"></span> All Rights Reserved Terms of Use and <a
+                class="text-gray-light" href="privacy.html">Privacy Policy</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Java script-->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0"
+      width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-P9FT69');</script>
+  <!-- End Google Tag Manager -->
+</body>
+
+</html>
