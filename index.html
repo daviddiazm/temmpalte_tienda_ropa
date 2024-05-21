@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="es">
   <head>
-    <!-- Site Title-->
+    <!-- Título del Sitio-->
     <title>Fashion Day</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <!-- Stylesheets-->
+    <!-- Hojas de Estilos-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans:400,700%7CMontserrat:400,700%7CPlayfair+Display:400,400i,700,700i,900,900i">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <script type="module" defer src="./js/main.js"></script>
 		<!--[if lt IE 10]>
-    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="Estás usando un navegador desactualizado. Para una experiencia de navegación más rápida y segura, actualízalo gratis hoy."></a></div>
     <script src="js/html5shiv.min.js"></script>
 		<![endif]-->
   </head>
   <body>
+    <div class="login-container" id="login-container" >
+      <div class="login-header">
+          <h2>Login</h2>
+      </div>
+      <form action="#" method="post">
+          <div class="form-group">
+              <label for="email">Correo Electrónico:</label>
+              <input type="email" id="email" name="email" >
+          </div>
+          <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" >
+          </div>
+          <div class="form-group">
+              <input type="submit" value="Iniciar Sesión">
+          </div>
+          <div class="form-group">
+              <button class="google-login-button" id="googleauthLogin" >Iniciar Sesión con Google</button>
+          </div>
+      </form>
+  </div>
+
     <div class="preloader">
       <div class="preloader-body">
         <div id="circular3dG">
@@ -31,9 +54,10 @@
           <div class="circular3dG" id="circular3d_7G"></div>
           <div class="circular3dG" id="circular3d_8G"></div>
         </div>
-        <p>Loading...</p>
+        <p>Cargando...</p>
       </div>
     </div>
+
     <!-- Page-->
     <div class="page text-center">
       <header class="page-header">
@@ -52,7 +76,7 @@
                           <div class="icon icon-sm icon-primary icon-circle mdi mdi-calendar-clock text-bermuda"></div>
                         </div>
                         <div class="unit-body">
-                          <div class="text-gray-lighter">Mon–Sun: 9:00am–9:00pm</div>
+                          <div class="text-gray-lighter">Lun–Dom: 9:00am–9:00pm</div>
                         </div>
                       </div>
                     </div>
@@ -89,74 +113,75 @@
                 <div class="rd-navbar-nav-wrap d-inline-block">
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="entertainment.html">Services</a>
-                      <!-- RD Navbar Dropdown-->
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="shops.html">Shops</a></li>
-                        <li><a href="food.html">Food</a></li>
-                        <li><a href="entertainment.html">Entertainment</a></li>
-                        <li><a href="parking.html">Parking</a></li>
-                        <li><a href="gift-cards.html">Gift Cards</a></li>
-                      </ul>
+                    <li class="active"><a href="index.html">Inicio</a></li>
+                    <li><a href="entertainment.html">Servicios</a>
+                        <!-- Menú Desplegable RD Navbar-->
+                        <ul class="rd-navbar-dropdown">
+                            <li><a href="shops.html">Tiendas</a></li>
+                            <li><a href="food.html">Comida</a></li>
+                            <li><a href="entertainment.html">Entretenimiento</a></li>
+                            <li><a href="parking.html">Estacionamiento</a></li>
+                            <li><a href="gift-cards.html">Tarjetas de Regalo</a></li>
+                        </ul>
                     </li>
-                    <li><a href="events.html">Events</a>
-                      <!-- RD Navbar Dropdown-->
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="events.html">All Events</a></li>
-                        <li><a href="event-single.html">Event Page</a></li>
-                      </ul>
+                    <li><a href="events.html">Eventos</a>
+                        <!-- Menú Desplegable RD Navbar-->
+                        <ul class="rd-navbar-dropdown">
+                            <li><a href="events.html">Todos los Eventos</a></li>
+                            <li><a href="event-single.html">Página de Evento</a></li>
+                        </ul>
                     </li>
-                    <li><a href="sales.html">Sales</a></li>
-                    <li><a href="blog-classic.html">News</a>
-                      <!-- RD Navbar Dropdown-->
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="blog-classic.html">Blog Classic</a></li>
-                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                        <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                        <li><a href="blog-modern.html">Blog Modern</a></li>
-                        <li><a href="blog-post.html">Blog Post</a></li>
-                      </ul>
+                    <li><a href="sales.html">Ventas</a></li>
+                    <li><a href="blog-classic.html">Noticias</a>
+                        <!-- Menú Desplegable RD Navbar-->
+                        <ul class="rd-navbar-dropdown">
+                            <li><a href="blog-classic.html">Blog Clásico</a></li>
+                            <li><a href="blog-grid.html">Cuadrícula de Blog</a></li>
+                            <li><a href="blog-masonry.html">Mampostería de Blog</a></li>
+                            <li><a href="blog-modern.html">Blog Moderno</a></li>
+                            <li><a href="blog-post.html">Publicación de Blog</a></li>
+                        </ul>
                     </li>
-                    <li><a href="#">Pages</a>
-                      <!-- RD Navbar Megamenu-->
-                      <div class="rd-navbar-megamenu">
-                        <div class="row no-gutters justify-content-sm-center">
-                          <ul class="col-lg-3">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="forms.html">Forms</a></li>
-                            <li><a href="tabs-accordions.html">Tabs & Accordions</a></li>
-                            <li><a href="tables.html">Tables</a></li>
-                            <li><a href="progress-bars.html">Progress Bars</a></li>
-                          </ul>
-                          <ul class="col-lg-3 offset-top-0">
-                            <li><a href="grid.html">Grid</a></li>
-                            <li><a href="404.html">404 Page</a></li>
-                            <li><a href="503.html">503 Page</a></li>
-                            <li><a href="maintenance.html">Maintenance</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                            <li><a href="sitemap.html">Sitemap</a></li>
-                          </ul>
-                          <ul class="col-lg-3 offset-top-0">
-                            <li><a href="privacy.html">Terms of Use</a></li>
-                            <li><a href="directions.html">Directions</a></li>
-                            <li><a href="sale-single.html">Sale Page</a></li>
-                            <li><a href="shop-single.html">Shop Page</a></li>
-                            <li><a href="restaurant-single.html">Restaurant Page</a></li>
-                            <li><a href="search-results.html">Search Results</a></li>
-                          </ul>
-                          <ul class="col-lg-3 offset-top-0">
-                            <li><a href="gallery-grid.html">Gallery Grid</a></li>
-                            <li><a href="gallery-grid-without-padding.html">Gallery Grid without Padding</a></li>
-                            <li><a href="gallery-cobbles.html">Gallery Cobbles</a></li>
-                            <li><a href="gallery-masonry.html">Gallery Masonry</a></li>
-                          </ul>
+                    <li><a href="#">Páginas</a>
+                        <!-- Megamenú RD Navbar-->
+                        <div class="rd-navbar-megamenu">
+                            <div class="row no-gutters justify-content-sm-center">
+                                <ul class="col-lg-3">
+                                    <li><a href="typography.html">Tipografía</a></li>
+                                    <li><a href="buttons.html">Botones</a></li>
+                                    <li><a href="forms.html">Formularios</a></li>
+                                    <li><a href="tabs-accordions.html">Pestañas y Acordeones</a></li>
+                                    <li><a href="tables.html">Tablas</a></li>
+                                    <li><a href="progress-bars.html">Barras de Progreso</a></li>
+                                </ul>
+                                <ul class="col-lg-3 offset-top-0">
+                                    <li><a href="grid.html">Cuadrícula</a></li>
+                                    <li><a href="404.html">Página 404</a></li>
+                                    <li><a href="503.html">Página 503</a></li>
+                                    <li><a href="maintenance.html">Mantenimiento</a></li>
+                                    <li><a href="coming-soon.html">Próximamente</a></li>
+                                    <li><a href="sitemap.html">Mapa del Sitio</a></li>
+                                </ul>
+                                <ul class="col-lg-3 offset-top-0">
+                                    <li><a href="privacy.html">Términos de Uso</a></li>
+                                    <li><a href="directions.html">Direcciones</a></li>
+                                    <li><a href="sale-single.html">Página de Venta</a></li>
+                                    <li><a href="shop-single.html">Página de Tienda</a></li>
+                                    <li><a href="restaurant-single.html">Página de Restaurante</a></li>
+                                    <li><a href="search-results.html">Resultados de Búsqueda</a></li>
+                                </ul>
+                                <ul class="col-lg-3 offset-top-0">
+                                    <li><a href="gallery-grid.html">Cuadrícula de Galería</a></li>
+                                    <li><a href="gallery-grid-without-padding.html">Cuadrícula de Galería sin Relleno</a></li>
+                                    <li><a href="gallery-cobbles.html">Piedras de Galería</a></li>
+                                    <li><a href="gallery-masonry.html">Mampostería de Galería</a></li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
                     </li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                  </ul>
+                    <li><a href="contacts.html">Contactos</a></li>
+                </ul>
+                
                 </div>
                 <!--RD Navbar Search-->
                 <div class="rd-navbar-search-wrap-fixed d-inline-block">
@@ -164,7 +189,7 @@
                     <div class="rd-navbar-search"><a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
                       <form class="rd-search rd-navbar-search-custom" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
                         <div class="form-group">
-                          <label class="form-label" for="rd-navbar-search-form-input">Search</label>
+                          <label class="form-label" for="rd-navbar-search-form-input">Buscar</label>
                           <input class="rd-navbar-search-form-input form-control form-control-gray-lightest" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
                           <button type="submit"><span class="icon icon-xs fa fa-search"></span></button>
                         </div>
@@ -189,18 +214,19 @@
                   <div class="container-wide container-wide-custom">
                     <div class="row justify-content-sm-center justify-content-xl-start text-xl-left">
                       <div class="col-md-10 col-xl-7">
-                        <div class="text-big-84 font-italic font-monospace text-spacing-inverse-20 text-white">Season Sale</div>
+                        <div class="text-big-84 font-italic font-monospace text-spacing-inverse-20 text-white">Venta de temporada</div>
                         <div class="d-none d-xl-inline-block offset-top-25 offset-sm-top-30">
-                          <hr class="divider divider-mod divider-58 bg-default">
+                            <hr class="divider divider-mod divider-58 bg-default">
                         </div>
                         <div class="d-inline-block text-top offset-top-10 offset-sm-top-15 inset-left-10">
-                          <h4 class="text-white">UP TO</h4>
+                            <h4 class="text-white">HASTA</h4>
                         </div>
                         <div class="d-inline-block text-top inset-left-10">
-                          <h1>70% OFF</h1>
+                            <h1>70% DE DESCUENTO</h1>
                         </div>
-                        <div class="offset-top-20"><a class="btn btn-width-165 btn-bermuda" href="shops.html">shop now</a></div>
-                      </div>
+                        <div class="offset-top-20"><a class="btn btn-width-165 btn-bermuda" href="shops.html">Comprar ahora</a></div>
+                    </div>
+                    
                     </div>
                   </div>
                 </div>
@@ -212,19 +238,20 @@
                   <div class="container-wide container-wide-custom">
                     <div class="row justify-content-sm-center justify-content-xl-start text-xl-left">
                       <div class="col-md-10 col-xl-7">
-                        <h4 class="text-uppercase text-white">New Collection</h4>
-                        <h1 class="text-uppercase text-spacing-100">always</h1>
+                        <h4 class="text-uppercase text-white">Nueva Colección</h4>
+                        <h1 class="text-uppercase text-spacing-100">siempre</h1>
                         <div class="d-none d-xl-inline-block offset-top-45">
-                          <hr class="divider divider-xl bg-default">
+                            <hr class="divider divider-xl bg-default">
                         </div>
                         <div class="d-inline-block text-top inset-xl-left-35">
-                          <div class="text-big-84 font-monospace font-italic text-white text-spacing-inverse-20">in</div>
+                            <div class="text-big-84 font-monospace font-italic text-white text-spacing-inverse-20">en</div>
                         </div>
                         <div class="d-inline-block text-top inset-left-15">
-                          <h1 class="text-uppercase text-spacing-100 text-height-1">style</h1>
+                            <h1 class="text-uppercase text-spacing-100 text-height-1">estilo</h1>
                         </div>
-                        <div class="offset-top-15 offset-md-top-65"><a class="btn btn-width-165 btn-bermuda" href="shops.html">shop now</a></div>
-                      </div>
+                        <div class="offset-top-15 offset-md-top-65"><a class="btn btn-width-165 btn-bermuda" href="shops.html">comprar ahora</a></div>
+                    </div>
+                    
                     </div>
                   </div>
                 </div>
@@ -234,21 +261,22 @@
               <div class="swiper-slide-caption">
                 <div class="inset-xl-left-35 inset-xxl-left-125">
                   <div class="container-wide container-wide-custom">
-                    <div class="row justify-content-sm-center justify-content-xl-start text-xl-left">
-                      <div class="col-md-10 col-xl-7">
-                        <div class="text-big-84 font-italic font-monospace text-spacing-inverse-20 text-white">Friends & Family</div>
-                        <h1>30% OFF</h1>
-                        <div class="d-none d-xl-inline-block offset-top-25">
-                          <hr class="divider divider-xl bg-default">
-                        </div>
-                        <div class="d-inline-block text-top offset-lg-top-10 inset-left-10">
-                          <h4 class="text-uppercase">EVERYTHING</h4>
-                        </div>
-                        <div class="offset-top-15 offset-md-top-65"><a class="btn btn-width-165 btn-bermuda" href="shops.html">shop now</a></div>
+                      <div class="row justify-content-sm-center justify-content-xl-start text-xl-left">
+                          <div class="col-md-10 col-xl-7">
+                              <div class="text-big-84 font-italic font-monospace text-spacing-inverse-20 text-white">Amigos y Familia</div>
+                              <h1>30% de DESCUENTO</h1>
+                              <div class="d-none d-xl-inline-block offset-top-25">
+                                  <hr class="divider divider-xl bg-default">
+                              </div>
+                              <div class="d-inline-block text-top offset-lg-top-10 inset-left-10">
+                                  <h4 class="text-uppercase">TODO</h4>
+                              </div>
+                              <div class="offset-top-15 offset-md-top-65"><a class="btn btn-width-165 btn-bermuda" href="shops.html">comprar ahora</a></div>
+                          </div>
                       </div>
-                    </div>
                   </div>
-                </div>
+              </div>
+              
               </div>
             </div>
           </div>
@@ -260,12 +288,38 @@
         </div>
         <div class="swiper-aside-right">
           <ul class="list list-background-minsk list-0 text-center section-top-60 section-md-top-0">
-            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0"><a class="box-sm bg-accent d-block" href="directions.html"><span class="sprite sprite-icon-02-44x44 d-inline-block"></span><span class="font-weight-bold text-white d-block">Directions</span></a></li>
-            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0"><a class="box-sm bg-accent d-block" href="shops.html"><span class="sprite sprite-icon-06-44x44 d-inline-block"></span><span class="font-weight-bold text-white d-block">Shops</span></a></li>
-            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0"><a class="box-sm bg-accent d-block" href="food.html"><span class="sprite sprite-icon-05-44x44 d-inline-block"></span><span class="font-weight-bold text-white d-block">Food</span></a></li>
-            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0"><a class="box-sm bg-accent d-block" href="entertainment.html"><span class="sprite sprite-icon-04-45x44 d-inline-block"></span><span class="font-weight-bold text-white d-block">Entertainment</span></a></li>
-            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0"><a class="box-sm bg-accent d-block" href="parking.html"><span class="sprite sprite-icon-03-36x44 d-inline-block"></span><span class="font-weight-bold text-white d-block">Parking</span></a></li>
-          </ul>
+            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0">
+                <a class="box-sm bg-accent d-block" href="directions.html">
+                    <span class="sprite sprite-icon-02-44x44 d-inline-block"></span>
+                    <span class="font-weight-bold text-white d-block">Direcciones</span>
+                </a>
+            </li>
+            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0">
+                <a class="box-sm bg-accent d-block" href="shops.html">
+                    <span class="sprite sprite-icon-06-44x44 d-inline-block"></span>
+                    <span class="font-weight-bold text-white d-block">Tiendas</span>
+                </a>
+            </li>
+            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0">
+                <a class="box-sm bg-accent d-block" href="food.html">
+                    <span class="sprite sprite-icon-05-44x44 d-inline-block"></span>
+                    <span class="font-weight-bold text-white d-block">Comida</span>
+                </a>
+            </li>
+            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0">
+                <a class="box-sm bg-accent d-block" href="entertainment.html">
+                    <span class="sprite sprite-icon-04-45x44 d-inline-block"></span>
+                    <span class="font-weight-bold text-white d-block">Entretenimiento</span>
+                </a>
+            </li>
+            <li class="inset-sm-left-85 inset-sm-right-85 inset-md-left-0 inset-md-right-0 offset-top-30 offset-md-top-0">
+                <a class="box-sm bg-accent d-block" href="parking.html">
+                    <span class="sprite sprite-icon-03-36x44 d-inline-block"></span>
+                    <span class="font-weight-bold text-white d-block">Estacionamiento</span>
+                </a>
+            </li>
+        </ul>
+        
         </div>
       </div>
       <main class="page-content">
@@ -286,36 +340,41 @@
                 <div class="col-md-10 col-xl-5 col-xxl-4 text-left">
                   <hr class="divider hr-lg-left-0 bg-bermuda">
                   <div class="offset-top-20">
-                    <h3 class="text-center text-lg-left">A Few Words <br class="d-none d-xxl-inline-block"> About Fashion Day</h3>
-                    <div class="offset-top-30">
-                      <p>Fashion Day is a four-story vertical shopping and entertainment center located in the heart of downtown San Diego in the thriving Yerba Buena Neighborhood. Shop at the City Target on the second level and visit a 16-screen AMC Theater with the largest IMAX in North America.</p>
-                    </div>
-                    <div class="offset-top-30 text-center text-lg-left"><a class="btn btn-width-175 btn-primary" href="entertainment.html">learn more</a></div>
+                      <h3 class="text-center text-lg-left">Unas Cuantas Palabras <br class="d-none d-xxl-inline-block"> Sobre Fashion Day</h3>
+                      <div class="offset-top-30">
+                          <p>Fashion Day es un centro comercial y de entretenimiento vertical de cuatro pisos ubicado en el corazón del centro de San Diego en el próspero barrio de Yerba Buena. Compra en el City Target en el segundo nivel y visita un cine AMC de 16 pantallas con el IMAX más grande de América del Norte.</p>
+                      </div>
+                      <div class="offset-top-30 text-center text-lg-left"><a class="btn btn-width-175 btn-primary" href="entertainment.html">saber más</a></div>
                   </div>
-                </div>
+              </div>
+              
                 <div class="col-md-10 col-xl-7 col-xxl-8 offset-top-60 offset-xl-top-0">
                   <div class="row justify-content-sm-center justify-content-md-start justify-content-lg-center inset-xxl-left-70 row-60">
-                    <div class="col-md-6 col-lg-4"><span class="icon icon-lg icon-circle icon-white shadow-drop mdi mdi-wifi text-primary"></span>
+                    <div class="col-md-6 col-lg-4">
+                      <span class="icon icon-lg icon-circle icon-white shadow-drop mdi mdi-wifi text-primary"></span>
                       <div class="offset-top-25 offset-md-top-35 inset-xxl-left-15 inset-xxl-right-15">
-                        <h6>Free Wi-Fi</h6>
-                        <hr class="divider divider-xs bg-bermuda offset-top-15">
-                        <p class="offset-top-15 offset-md-top-25">We have a network accessible for free across the entire common mall area.</p>
+                          <h6>Wi-Fi Gratis</h6>
+                          <hr class="divider divider-xs bg-bermuda offset-top-15">
+                          <p class="offset-top-15 offset-md-top-25">Tenemos una red accesible de forma gratuita en toda el área común del centro comercial.</p>
                       </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4"><span class="icon icon-lg icon-circle icon-white shadow-drop mdi mdi-wallet-giftcard text-primary"></span>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <span class="icon icon-lg icon-circle icon-white shadow-drop mdi mdi-wallet-giftcard text-primary"></span>
                       <div class="offset-top-25 offset-md-top-35 inset-xxl-left-15 inset-xxl-right-15">
-                        <h6>Mall Gift Cards</h6>
-                        <hr class="divider divider-xs bg-bermuda offset-top-15">
-                        <p class="offset-top-15 offset-md-top-25">The best gift solution is available at your favorite shopping mall.</p>
+                          <h6>Tarjetas de Regalo del Centro Comercial</h6>
+                          <hr class="divider divider-xs bg-bermuda offset-top-15">
+                          <p class="offset-top-15 offset-md-top-25">La mejor solución de regalo está disponible en tu centro comercial favorito.</p>
                       </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4"><span class="icon icon-lg icon-circle icon-white shadow-drop mdi mdi-wallet-travel text-primary"></span>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <span class="icon icon-lg icon-circle icon-white shadow-drop mdi mdi-wallet-travel text-primary"></span>
                       <div class="offset-top-25 offset-md-top-35 inset-xxl-left-15 inset-xxl-right-15">
-                        <h6>Lost and Found</h6>
-                        <hr class="divider divider-xs bg-bermuda offset-top-15">
-                        <p class="offset-top-15 offset-md-top-25">Did you lose an item while visiting the mall? Call now <a class="text-nowrap text-gray-light" href="tel:#">1-800-1234-456</a></p>
+                          <h6>Objetos Perdidos</h6>
+                          <hr class="divider divider-xs bg-bermuda offset-top-15">
+                          <p class="offset-top-15 offset-md-top-25">¿Perdiste un objeto mientras visitabas el centro comercial? Llama ahora al <a class="text-nowrap text-gray-light" href="tel:#">1-800-1234-456</a></p>
                       </div>
-                    </div>
+                  </div>
+                  
                   </div>
                 </div>
               </div>
@@ -325,49 +384,70 @@
         <section class="section-80 section-md-0 bg-shark">
           <div class="row no-gutters justify-content-sm-center row-30 row-lg-0">
             <div class="col-sm-6 col-md-6 col-xl-3 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
-              <figure class="thumbnail-terry thumbnail-terry-modern"><a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-01-480x360.jpg" alt=""></a>
-                <figcaption class="text-left">
-                  <div class="figcaption-caption">
-                    <h4 class="thumbnail-terry-title text-spacing-40">FREE COFFEE</h4>
-                    <p class="thumbnail-terry-desc text-white-07 offset-top-5">at our café for all Fashion Day  club members</p>
-                  </div>
-                  <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0"><a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html"><span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span>Learn More</a></div>
-                </figcaption>
+              <figure class="thumbnail-terry thumbnail-terry-modern">
+                  <a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-01-480x360.jpg" alt=""></a>
+                  <figcaption class="text-left">
+                      <div class="figcaption-caption">
+                          <h4 class="thumbnail-terry-title text-spacing-40">CAFÉ GRATIS</h4>
+                          <p class="thumbnail-terry-desc text-white-07 offset-top-5">en nuestro café para todos los miembros del club Fashion Day</p>
+                      </div>
+                      <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0">
+                          <a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html">
+                              <span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span> Más información
+                          </a>
+                      </div>
+                  </figcaption>
               </figure>
-            </div>
-            <div class="col-sm-6 col-md-6 col-xl-3 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
-              <figure class="thumbnail-terry thumbnail-terry-modern"><a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-02-480x360.jpg" alt=""></a>
-                <figcaption class="text-left">
-                  <div class="figcaption-caption">
-                    <h4 class="thumbnail-terry-title text-spacing-40 text-uppercase">Save 30%</h4>
-                    <p class="thumbnail-terry-desc text-white-07 offset-top-5">at all jewelry stores of Fashion Day</p>
-                  </div>
-                  <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0"><a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html"><span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span>Learn More</a></div>
-                </figcaption>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xl-3 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
+              <figure class="thumbnail-terry thumbnail-terry-modern">
+                  <a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-02-480x360.jpg" alt=""></a>
+                  <figcaption class="text-left">
+                      <div class="figcaption-caption">
+                          <h4 class="thumbnail-terry-title text-spacing-40 text-uppercase">Ahorra un 30%</h4>
+                          <p class="thumbnail-terry-desc text-white-07 offset-top-5">en todas las joyerías de Fashion Day</p>
+                      </div>
+                      <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0">
+                          <a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html">
+                              <span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span> Más información
+                          </a>
+                      </div>
+                  </figcaption>
               </figure>
-            </div>
-            <div class="col-sm-6 col-md-6 col-xl-3 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
-              <figure class="thumbnail-terry thumbnail-terry-modern"><a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-03-480x360.jpg" alt=""></a>
-                <figcaption class="text-left">
-                  <div class="figcaption-caption">
-                    <h4 class="thumbnail-terry-title text-spacing-40 text-uppercase">Save 25%</h4>
-                    <p class="thumbnail-terry-desc text-white-07 offset-top-5">at men’s clothes shops</p>
-                  </div>
-                  <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0"><a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html"><span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span>Learn More</a></div>
-                </figcaption>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xl-3 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
+              <figure class="thumbnail-terry thumbnail-terry-modern">
+                  <a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-03-480x360.jpg" alt=""></a>
+                  <figcaption class="text-left">
+                      <div class="figcaption-caption">
+                          <h4 class="thumbnail-terry-title text-spacing-40 text-uppercase">Ahorra un 25%</h4>
+                          <p class="thumbnail-terry-desc text-white-07 offset-top-5">en tiendas de ropa para hombres</p>
+                      </div>
+                      <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0">
+                          <a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html">
+                              <span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span> Más información
+                          </a>
+                      </div>
+                  </figcaption>
               </figure>
-            </div>
-            <div class="col-sm-6 col-md-6 col-xl-3 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
-              <figure class="thumbnail-terry thumbnail-terry-modern"><a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-04-480x360.jpg" alt=""></a>
-                <figcaption class="text-left">
-                  <div class="figcaption-caption">
-                    <h4 class="thumbnail-terry-title text-spacing-40 text-uppercase">Save 10%</h4>
-                    <p class="thumbnail-terry-desc text-white-07 offset-top-5">at Fashion Day Cinema Hall</p>
-                  </div>
-                  <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0"><a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html"><span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span>Learn More</a></div>
-                </figcaption>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xl-3 inset-left-15 inset-right-15 inset-lg-left-0 inset-lg-right-0">
+              <figure class="thumbnail-terry thumbnail-terry-modern">
+                  <a href="sale-single.html"><img width="480" height="360" src="images/pages/sales-04-480x360.jpg" alt=""></a>
+                  <figcaption class="text-left">
+                      <div class="figcaption-caption">
+                          <h4 class="thumbnail-terry-title text-spacing-40 text-uppercase">Ahorra un 10%</h4>
+                          <p class="thumbnail-terry-desc text-white-07 offset-top-5">en Fashion Day Cinema Hall</p>
+                      </div>
+                      <div class="thumbnail-terry-btn-wrap text-lg-right offset-top-10 offset-md-top-0">
+                          <a class="btn btn-thumbnail-terry btn-rect btn-icon btn-icon-right btn-primary" href="sale-single.html">
+                              <span class="icon icon-xs mdi mdi-arrow-right d-none d-md-inline-block"></span> Más información
+                          </a>
+                      </div>
+                  </figcaption>
               </figure>
-            </div>
+          </div>
+          
           </div>
         </section>
         <section class="section-80 section-md-120">
@@ -375,53 +455,55 @@
             <div class="container-wide container-wide-custom">
               <hr class="divider bg-bermuda">
               <div class="offset-top-20">
-                <h3>Events</h3>
+                  <h3>Eventos</h3>
               </div>
               <div class="row justify-content-sm-center justify-content-xl-start text-left offset-top-35 offset-md-top-60 row-50">
-                <div class="col-lg-6">
-                  <div class="row justify-content-sm-center justify-content-xl-start row-30">
-                    <div class="col-md-5 col-lg-10 col-xl-5"><img class="img-responsive" src="images/blog/post-13-320x442.jpg" width="320" height="442" alt=""></div>
-                    <div class="col-md-6 col-lg-10 col-xl-6">
-                      <ul class="list-inline list-inline-20">
-                        <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10">June, 29</span></li>
-                        <li><span class="icon icon-normal icon-sm mdi mdi-clock text-bermuda text-middle"></span><span class="text-middle inset-left-10">6:00pm</span></li>
-                      </ul>
-                      <div class="offset-top-25">
-                        <h5><a href="event-single.html">The KidsLand Summer Day</a></h5>
+                  <div class="col-lg-6">
+                      <div class="row justify-content-sm-center justify-content-xl-start row-30">
+                          <div class="col-md-5 col-lg-10 col-xl-5"><img class="img-responsive" src="images/blog/post-13-320x442.jpg" width="320" height="442" alt=""></div>
+                          <div class="col-md-6 col-lg-10 col-xl-6">
+                              <ul class="list-inline list-inline-20">
+                                  <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10">29 de Junio</span></li>
+                                  <li><span class="icon icon-normal icon-sm mdi mdi-clock text-bermuda text-middle"></span><span class="text-middle inset-left-10">6:00pm</span></li>
+                              </ul>
+                              <div class="offset-top-25">
+                                  <h5><a href="event-single.html">El Día de Verano en KidsLand</a></h5>
+                              </div>
+                              <div class="offset-top-25">
+                                  <p>El Día de Verano en KidsLand comenzará el Sábado, 4 de Julio, con una celebración especial y se extenderá hasta el Domingo, 4 de Septiembre. <span class="d-lg-none d-xl-inline">Los niños pueden participar en una variedad de actividades temáticas y transmitir eventos en vivo desde la Estación de Radio y el Estudio de TV de KidsLand ubicados en Fashion Day.</span></p>
+                              </div>
+                              <div class="offset-top-20">
+                                  <div class="h5-variant-2 font-weight-bold font-italic text-gray">Entrada Gratuita</div>
+                              </div>
+                              <div class="offset-top-25"><a class="btn btn-width-175 btn-primary-outline" href="event-single.html">obtener más información</a></div>
+                          </div>
                       </div>
-                      <div class="offset-top-25">
-                        <p>The KidsLand SummerDay will begin on Saturday, July 4, with a special celebration and will run until Sunday, September 4. <span class="d-lg-none d-xl-inline">Children can take part in a variety of themed activities and broadcast live events from the KidsLand Radio Station and TV Studio located at Fashion Day.</span></p>
-                      </div>
-                      <div class="offset-top-20">
-                        <div class="h5-variant-2 font-weight-bold font-italic text-gray">Free Entry</div>
-                      </div>
-                      <div class="offset-top-25"><a class="btn btn-width-175 btn-primary-outline" href="event-single.html">learn more</a></div>
-                    </div>
                   </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="row justify-content-sm-center justify-content-xl-start row-30">
-                    <div class="col-md-5 col-lg-10 col-xl-5"><img class="img-responsive" src="images/blog/post-14-320x442.jpg" width="320" height="442" alt=""></div>
-                    <div class="col-md-6 col-lg-10 col-xl-6">
-                      <ul class="list-inline list-inline-20">
-                        <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10">August, 29</span></li>
-                        <li><span class="icon icon-normal icon-sm mdi mdi-clock text-bermuda text-middle"></span><span class="text-middle inset-left-10">6:00pm</span></li>
-                      </ul>
-                      <div class="offset-top-25">
-                        <h5><a href="event-single.html">Fashion Day Cafe Evening</a></h5>
+                  <div class="col-lg-6">
+                      <div class="row justify-content-sm-center justify-content-xl-start row-30">
+                          <div class="col-md-5 col-lg-10 col-xl-5"><img class="img-responsive" src="images/blog/post-14-320x442.jpg" width="320" height="442" alt=""></div>
+                          <div class="col-md-6 col-lg-10 col-xl-6">
+                              <ul class="list-inline list-inline-20">
+                                  <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10">29 de Agosto</span></li>
+                                  <li><span class="icon icon-normal icon-sm mdi mdi-clock text-bermuda text-middle"></span><span class="text-middle inset-left-10">6:00pm</span></li>
+                              </ul>
+                              <div class="offset-top-25">
+                                  <h5><a href="event-single.html">Tarde de Café en Fashion Day</a></h5>
+                              </div>
+                              <div class="offset-top-25">
+                                  <p>Relájese y descanse durante el verano mientras disfruta de un cóctel de champagne especialmente creado <span class="d-lg-none d-xl-inline">o una copa de Ponche, diseñado para ayudarlo a refrescarse después de un largo día de compras. También se ofrece un té de la tarde inglés tradicional, junto con una deliciosa variedad de macarons.</span></p>
+                              </div>
+                              <div class="offset-top-20">
+                                  <div class="h5-variant-2 font-weight-bold font-italic text-gray">Entrada Gratuita</div>
+                              </div>
+                              <div class="offset-top-25"><a class="btn btn-width-175 btn-primary-outline" href="event-single.html">obtener más información</a></div>
+                          </div>
                       </div>
-                      <div class="offset-top-25">
-                        <p>Relax and unwind throughout the Summer while sipping on a specially created Champagne cocktail <span class="d-lg-none d-xl-inline">or a glass of Punch, designed to help you cool down after a long day of shopping. A traditional English afternoon tea is also offered, alongside a delicious array of macaroons.</span></p>
-                      </div>
-                      <div class="offset-top-20">
-                        <div class="h5-variant-2 font-weight-bold font-italic text-gray">Free Entry</div>
-                      </div>
-                      <div class="offset-top-25"><a class="btn btn-width-175 btn-primary-outline" href="event-single.html">learn more</a></div>
-                    </div>
                   </div>
-                </div>
-              </div><a class="btn btn-width-200 btn-bermuda offset-top-35 offset-md-top-65" href="events.html">view all events</a>
-            </div>
+              </div>
+              <a class="btn btn-width-200 btn-bermuda offset-top-35 offset-md-top-65" href="events.html">ver todos los eventos</a>
+          </div>
+          
           </div>
         </section>
         <section class="section-80 section-md-120 bg-selago">
@@ -429,32 +511,35 @@
             <div class="container-wide container-wide-custom">
               <hr class="divider bg-bermuda">
               <div class="offset-top-20">
-                <h3>Latest News</h3>
+                <h3>Ultimas Noticias</h3>
               </div>
               <div class="row justify-content-sm-center text-left offset-top-35 offset-md-top-60">
                 <div class="col-md-10 col-lg-6 col-xl-4 col-xxl-5">
                   <div class="post-box shadow-drop post-box-max-width-none d-block">
-                    <div class="post-box-img-wrap"><a class="thumbnail-robben" href="blog-post.html"><span class="thumbnail-robben-img-wrap post-box-top-radius"><img class="img-responsive center-block post-box-top-radius" src="images/blog/post-15-320x442.jpg" width="320" height="442" alt=""></span></a></div>
-                    <div class="post-box-caption post-box-bottom-radius bg-default"><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Article</span></a>
-                      <h5 class="offset-top-15"><a href="blog-post.html">Top 3 Reasons to Visit Fashion Day at Any Season and How You Can Benefit From It</a></h5>
-                      <p class="offset-top-20">Regardless of what season it is now, there are always plenty of reasons to visit our mall. In this article, we decided to show you the list of Top 3 reasons to visit Fashion Day. To begin with, people usually visit shopping malls to enjoy…</p>
-                      <ul class="list-inline list-inline-20 offset-top-22">
-                        <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">2 days ago</span></li>
-                        <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">23 Comments</a></span></li>
-                      </ul>
-                    </div>
+                      <div class="post-box-img-wrap"><a class="thumbnail-robben" href="blog-post.html"><span class="thumbnail-robben-img-wrap post-box-top-radius"><img class="img-responsive center-block post-box-top-radius" src="images/blog/post-15-320x442.jpg" width="320" height="442" alt=""></span></a></div>
+                      <div class="post-box-caption post-box-bottom-radius bg-default"><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Artículo</span></a>
+                          <h5 class="offset-top-15"><a href="blog-post.html">Top 3 Razones para Visitar Fashion Day en Cualquier Temporada y Cómo Puede Beneficiarse de Ello</a></h5>
+                          <p class="offset-top-20">Independientemente de la temporada en la que nos encontremos, siempre hay muchas razones para visitar nuestro centro comercial. En este artículo, decidimos mostrarte la lista de las 3 principales razones para visitar Fashion Day. Para empezar, la gente suele visitar los centros comerciales para disfrutar…</p>
+                          <ul class="list-inline list-inline-20 offset-top-22">
+                              <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">Hace 2 días</span></li>
+                              <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">23 Comentarios</a></span></li>
+                          </ul>
+                      </div>
                   </div>
-                </div>
+              </div>
+              
                 <div class="col-md-10 col-lg-6 col-xl-4 col-xxl-3 offset-top-30 offset-lg-top-5">
                   <div class="post-box shadow-drop post-box-max-width-none d-block">
-                    <div class="post-box-caption post-box-top-radius post-box-bottom-radius bg-default"><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Fashion</span></a>
-                      <h5 class="offset-top-15"><a href="blog-post.html">Perfect Clothes to Wear When It’s Hot</a></h5>
-                      <p class="offset-top-20">In the middle of a heatwave, your corporate uniform — the usual blazers, slacks, and button-downs—is the...</p>
+                    <div class="post-box-caption post-box-top-radius post-box-bottom-radius bg-default">
+                      <a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Moda</span></a>
+                      <h5 class="offset-top-15"><a href="blog-post.html">Ropa Perfecta para Usar Cuando Hace Calor</a></h5>
+                      <p class="offset-top-20">En medio de una ola de calor, tu uniforme corporativo habitual —los clásicos sacos, pantalones y camisas— es...</p>
                       <ul class="list-inline list-inline-20 offset-top-25 offset-md-top-50">
-                        <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">2 days ago</span></li>
-                        <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">23 Comments</a></span></li>
+                          <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">Hace 2 días</span></li>
+                          <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">23 Comentarios</a></span></li>
                       </ul>
-                    </div>
+                  </div>
+                  
                   </div>
                   <div class="offset-top-30 shadow-drop rd-video-xl-inset-74">
                     <div class="embed-responsive">
@@ -466,31 +551,36 @@
                   <div class="row justify-content-sm-center">
                     <div class="col-lg-6 col-xl-12">
                       <div class="post-box shadow-drop post-box-max-width-none d-block">
-                        <div class="post-box-caption post-box-top-radius post-box-bottom-radius bg-default"><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Quote</span></a>
-                          <blockquote class="quote offset-top-15"><span class="icon icon-rotate-180 mdi mdi-format-quote text-primary"></span>
-                            <p class="font-monospace font-italic text-gray-dark inset-left-10">
-                              <q>An exciting place for the whole family to shop. Whatever you’ve got in mind, we’ve got inside.</q>
-                            </p>
-                          </blockquote>
-                          <ul class="list-inline list-inline-20 offset-top-25 offset-lg-top-50">
-                            <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">2 days ago</span></li>
-                            <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">5 Comments</a></span></li>
-                          </ul>
+                        <div class="post-box-caption post-box-top-radius post-box-bottom-radius bg-default">
+                            <a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Cita</span></a>
+                            <blockquote class="quote offset-top-15">
+                                <span class="icon icon-rotate-180 mdi mdi-format-quote text-primary"></span>
+                                <p class="font-monospace font-italic text-gray-dark inset-left-10">
+                                    <q>Un lugar emocionante para que toda la familia compre. Todo lo que tienes en mente, lo tenemos aquí dentro.</q>
+                                </p>
+                            </blockquote>
+                            <ul class="list-inline list-inline-20 offset-top-25 offset-lg-top-50">
+                                <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">Hace 2 días</span></li>
+                                <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">5 Comentarios</a></span></li>
+                            </ul>
                         </div>
-                      </div>
+                    </div>
+                    
                     </div>
                     <div class="col-lg-6 col-xl-12 offset-top-35 offset-lg-top-0 offset-xl-top-35">
                       <div class="post-box post-box-min-height shadow-drop post-box-max-width-none d-block">
-                        <div class="post-box-caption post-box-top-radius post-box-bottom-radius bg-default"><a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Article</span></a>
-                          <h5 class="offset-top-15"><a href="blog-post.html">Planning Your Weekend? Visit Fashion Day!</a></h5>
-                          <p class="offset-top-30">Fashion Day often evokes memories of endless shopping, thrilling rides or concerts. But we...</p>
-                          <ul class="list-inline list-inline-20 offset-top-35">
-                            <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">2 days ago</span></li>
-                            <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">23 Comments</a></span></li>
-                          </ul>
-                        </div>
+                          <div class="post-box-caption post-box-top-radius post-box-bottom-radius bg-default">
+                              <a class="label-custom-wrap d-inline-block" href="#"><span class="label-custom label-bermuda">Artículo</span></a>
+                              <h5 class="offset-top-15"><a href="blog-post.html">¿Planeando tu fin de semana? ¡Visita Fashion Day!</a></h5>
+                              <p class="offset-top-30">Fashion Day a menudo evoca recuerdos de compras interminables, emocionantes paseos o conciertos. Pero nosotros...</p>
+                              <ul class="list-inline list-inline-20 offset-top-35">
+                                  <li><span class="icon icon-normal icon-sm mdi mdi-calendar text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic">Hace 2 días</span></li>
+                                  <li><span class="icon icon-normal icon-sm mdi mdi-comment-multiple-outline text-bermuda text-middle"></span><span class="text-middle inset-left-10 font-italic p"><a class="text-gray-light" href="#">23 Comentarios</a></span></li>
+                              </ul>
+                          </div>
                       </div>
-                    </div>
+                  </div>
+                  
                   </div>
                 </div>
               </div><a class="btn btn-width-200 btn-primary offset-top-35 offset-md-top-65" href="blog-classic.html">view all news</a>
@@ -503,32 +593,33 @@
               <div class="box-lg box-contacts bg-default text-left center-block shadow-drop">
                 <hr class="divider hr-left-0 bg-bermuda">
                 <div class="offset-top-15">
-                  <h5>Contact Information</h5>
+                  <h5>Información de contacto</h5>
                   <address class="contact-info offset-top-35 p">
-                    <div class="unit flex-row unit-spacing-xs">
-                      <div class="unit-left"><span class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-map-marker text-primary"></span></div>
-                      <div class="unit-body"><a class="text-dove-gray" href="contacts.html">2130 Fulton Street, San Diego, CA 94117-1080 USA</a></div>
-                    </div>
-                    <div class="unit flex-row unit-spacing-xs offset-top-20">
-                      <div class="unit-left"><span class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-calendar-clock text-primary"></span></div>
-                      <div class="unit-body">
-                        <p class="text-dove-gray">Opening Hours: 9:00am–9:00pm Supermarket: 7:00am–11:00pm</p>
+                      <div class="unit flex-row unit-spacing-xs">
+                          <div class="unit-left"><span class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-map-marker text-primary"></span></div>
+                          <div class="unit-body"><a class="text-dove-gray" href="contacts.html">2130 Fulton Street, San Diego, CA 94117-1080 EE. UU.</a></div>
                       </div>
-                    </div>
-                    <div class="unit flex-row unit-spacing-xs offset-top-20">
-                      <div class="unit-left">
-                        <div class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-phone text-primary"></div>
+                      <div class="unit flex-row unit-spacing-xs offset-top-20">
+                          <div class="unit-left"><span class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-calendar-clock text-primary"></span></div>
+                          <div class="unit-body">
+                              <p class="text-dove-gray">Horario de apertura: 9:00 a. m.–9:00 p. m. Supermercado: 7:00 a. m.–11:00 p. m.</p>
+                          </div>
                       </div>
-                      <div class="unit-body"><a class="text-dove-gray" href="tel:#">1-800-3214-987</a></div>
-                    </div>
-                    <div class="unit flex-row unit-spacing-xs offset-top-20">
-                      <div class="unit-left">
-                        <div class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-email-outline text-primary"></div>
+                      <div class="unit flex-row unit-spacing-xs offset-top-20">
+                          <div class="unit-left">
+                              <div class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-phone text-primary"></div>
+                          </div>
+                          <div class="unit-body"><a class="text-dove-gray" href="tel:#">1-800-3214-987</a></div>
                       </div>
-                      <div class="unit-body"><a class="text-dove-gray" href="mailto:#">mail@demolink.org</a></div>
-                    </div>
+                      <div class="unit flex-row unit-spacing-xs offset-top-20">
+                          <div class="unit-left">
+                              <div class="icon icon-normal icon-sm icon-sm-variant-2 mdi mdi-email-outline text-primary"></div>
+                          </div>
+                          <div class="unit-body"><a class="text-dove-gray" href="mailto:#">mail@demolink.org</a></div>
+                      </div>
                   </address>
-                </div>
+              </div>
+              
               </div>
             </div>
             <div class="google-map-container" data-zoom="15" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-styles="[{&quot;featureType&quot;:&quot;landscape.natural&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#e0efef&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;hue&quot;:&quot;#1900ff&quot;},{&quot;color&quot;:&quot;#c0e8e8&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;lightness&quot;:100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit.line&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:700}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#7dcdcd&quot;}]}]">
@@ -544,40 +635,49 @@
         <div class="container-wide">
           <div class="row justify-content-sm-center inset-xxl-left-55 row-40">
             <div class="col-sm-6 col-md-5 col-xl-4 col-xxl-4 text-xxl-center">
-              <p class="text-gray-lighter text-left inset-xxl-right-140">Fashion Day is a four-story shopping and entertainment center located in the heart of downtown San Diego in the thriving Yerba Buena Neighborhood. Shop at the City Target on the second level and visit a 16-screen AMC Theater with the largest IMAX in North America.</p>
+              <p class="text-gray-lighter text-left inset-xxl-right-140">Fashion Day es un centro comercial y de
+                entretenimiento de cuatro pisos ubicado en el corazón del centro de San Diego en el próspero vecindario de
+                Yerba Buena. Compre en City Target en el segundo nivel y visite un teatro AMC de 16 pantallas con el IMAX
+                más grande de Norteamérica.</p>
             </div>
             <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
               <!-- List Marked-->
               <ul class="list list-marked list-marked-white text-left inset-xxl-left-75">
-                <li><a class="text-bermuda" href="shops.html">Shops</a></li>
-                <li><a class="text-bermuda" href="food.html">Food</a></li>
-                <li><a class="text-bermuda" href="entertainment.html">Entertainment</a></li>
-                <li><a class="text-bermuda" href="parking.html">Parking</a></li>
+                <li><a class="text-bermuda" href="shops.html">Tiendas</a></li>
+                <li><a class="text-bermuda" href="food.html">Comida</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">Entretenimiento</a></li>
+                <li><a class="text-bermuda" href="parking.html">Estacionamiento</a></li>
               </ul>
+  
             </div>
             <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-right">
-              <!-- List Marked-->
+              <!-- Lista Marcada -->
               <ul class="list list-marked list-marked-white text-left inset-xxl-left-100">
-                <li><a class="text-bermuda" href="gift-cards.html">Mall Gift Cards</a></li>
-                <li><a class="text-bermuda" href="entertainment.html">About Us</a></li>
-                <li><a class="text-bermuda" href="directions.html">Directions</a></li>
-                <li><a class="text-bermuda" href="entertainment.html">Services</a></li>
+                <li><a class="text-bermuda" href="gift-cards.html">Tarjetas de Regalo del Centro Comercial</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">Acerca de Nosotros</a></li>
+                <li><a class="text-bermuda" href="directions.html">Direcciones</a></li>
+                <li><a class="text-bermuda" href="entertainment.html">Servicios</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-md-5 col-xl-2 col-xxl-2 text-xxl-center">
-              <!-- List Marked-->
+              <!-- Lista Marcada -->
               <ul class="list list-marked list-marked-white text-left inset-xxl-left-140">
-                <li><a class="text-bermuda" href="events.html">Events</a></li>
-                <li><a class="text-bermuda" href="sales.html">Sales</a></li>
-                <li><a class="text-bermuda" href="blog-classic.html">Latest News</a></li>
-                <li><a class="text-bermuda" href="contacts.html">Contacts</a></li>
+                <li><a class="text-bermuda" href="events.html">Eventos</a></li>
+                <li><a class="text-bermuda" href="sales.html">Ventas</a></li>
+                <li><a class="text-bermuda" href="blog-classic.html">Últimas Noticias</a></li>
+                <li><a class="text-bermuda" href="contacts.html">Contactos</a></li>
               </ul>
             </div>
+  
           </div>
-          <div class="row justify-content-sm-center align-items-sm-center justify-content-xxl-between offset-xl-top-75 row-40 offset-top-50">
-            <div class="col-md-3 col-lg-5 col-xl-5 col-xxl-4 text-xxl-center text-md-left"><a class="d-inline-block" href="index.html"><img class="img-responsive center-block" src="images/logo-primary.png" width="179" height="54" alt=""></a></div>
+          <div
+            class="row justify-content-sm-center align-items-sm-center justify-content-xxl-between offset-xl-top-75 row-40 offset-top-50">
+            <div class="col-md-3 col-lg-5 col-xl-5 col-xxl-4 text-xxl-center text-md-left"><a class="d-inline-block"
+                href="index.html"><img class="img-responsive center-block" src="images/logo-primary.png" width="179"
+                  height="54" alt=""></a></div>
             <div class="col-md-7 col-lg-5 col-xl-5 text-xxl-center">
-              <p class="text-small">&#169; <span class="copyright-year"></span> All Rights Reserved Terms of Use and <a class="text-gray-light" href="privacy.html">Privacy Policy</a></p>
+              <p class="text-small">&#169; <span class="copyright-year"></span> Todos los derechos reservados y terminos
+                de uso <a class="text-gray-light" href="privacy.html">Privacy Policy</a></p>
             </div>
           </div>
         </div>
