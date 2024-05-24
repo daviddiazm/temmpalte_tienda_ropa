@@ -460,7 +460,7 @@ html p a:hover {
 
 .login-container {
 	position: fixed;
-	z-index: 200;
+	z-index: 5;
 	/* top: 25vh;
 	right: 40vw; */
 	background-color: #fff;
@@ -528,6 +528,23 @@ html p a:hover {
 .google-login-button:hover {
 	background-color: #1a73e8;
 }
+
+#imageId {
+	margin-top: 10px;
+	width: 75px;
+	height: 75px;
+	left: 200px;
+	/* position: absolute; */
+	z-index: 20;
+	border-radius: 50px;
+}
+
+#btn__img {
+	border: 0px;
+	border-color: transparent;
+	border-radius: 50px;
+}
+
 
 
 .page {
